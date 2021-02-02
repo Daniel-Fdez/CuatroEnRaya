@@ -19,7 +19,5 @@ public class MainApp {
 		Jugador segundoJugador = Consola.leerJugador(colorFicha);
 		CuatroEnRaya cuatroEnRaya = new CuatroEnRaya(primerJugador, segundoJugador);
 		cuatroEnRaya.jugar();
-
 	}
-
 }
