@@ -20,9 +20,11 @@ public class Jugador {
 		if(nombre == null) {
 			throw new NullPointerException("ERROR: El nombre no puede ser nulo.");
 		}
+		
 		if(nombre.equals("") || nombre.matches("\\s+")) {
 			throw new IllegalArgumentException("ERROR: El nombre no puede estar vacío.");
 		}
+		
 		this.nombre = nombre;
 	}
 	
@@ -36,12 +38,13 @@ public class Jugador {
 		if(colorFichas == null) {
 			throw new NullPointerException("ERROR: El color de las fichas no puede ser nulo.");
 		}
+		
 		this.colorFichas = colorFichas;
 	}
 
 	// Método toString para mostrar el nombre del jugador y el color de las fichas
 	@Override
 	public String toString() {
-		return nombre + " (" + colorFichas + ")";
+		return String.format("%s (%s)", nombre, colorFichas);
 	}
 }
