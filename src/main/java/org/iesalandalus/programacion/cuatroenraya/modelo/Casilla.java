@@ -42,7 +42,7 @@ public class Casilla {
 		if(ficha == null) {
 			return " ";
 		} else {
-			return String.format("%.1s", ficha);
+			return String.format("%.1s", estaOcupada() ? ficha.name().charAt(0) : "");
 		}
 	}
 }
